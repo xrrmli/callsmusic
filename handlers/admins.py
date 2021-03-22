@@ -21,10 +21,10 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text("❕ Nothing is playing.")
+        await message.reply_text("❕ TIDAK ADA LAGU YANG DIPUTAR.")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text("⏸ Paused.")
+        await message.reply_text("⏸ LAGU DIJEDA.")
 
 
 @Client.on_message(command(["resume", "r"]))
@@ -36,10 +36,10 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text("❕ Nothing is paused.")
+        await message.reply_text("❕ TIDAK ADA LAGU YANG DIJEDA.")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("▶️ Resumed.")
+        await message.reply_text("▶️ LAGU DILANJUTKAN.")
 
 
 @Client.on_message(command(["stop", "s"]))
@@ -47,7 +47,7 @@ async def resume(_, message: Message):
 @admins_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❕ Nothing is streaming.")
+        await message.reply_text("❕ TIDAK ADA LAGU YANG DIMAINKAN.")
     else:
         try:
             queues.clear(message.chat.id)
@@ -55,7 +55,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("⏹ Stopped streaming.")
+        await message.reply_text("⏹ LAGU DIHENTIKAN.")
 
 
 @Client.on_message(command(["skip", "f"]))
@@ -63,7 +63,7 @@ async def stop(_, message: Message):
 @admins_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❕ Nothing is playing to skip.")
+        await message.reply_text("❕ TIDAK ADA LAGU SELANJUTNYA.")
     else:
         queues.task_done(message.chat.id)
 
@@ -72,7 +72,7 @@ async def skip(_, message: Message):
         else:
             callsmusic.pytgcalls.change_stream(message.chat.id, queues.get(message.chat.id)["file_path"])
 
-        await message.reply_text("⏩ Skipped the current song.")
+        await message.reply_text("⏩ MELEWATI KE LAGU SELANJUTNYA.")
 
 
 @Client.on_message(command("admincache"))
