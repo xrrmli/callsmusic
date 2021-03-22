@@ -25,7 +25,7 @@ Berikut dibawah ini adalah kontak owner bot.""",
                 ],
                 [
                     InlineKeyboardButton(
-                        "CARA MEMAKAINYA", url="https://telegra.ph/Cara-menggunakan-Bot-Music-03-12"
+                        "CARA MEMAKAINYA", url="https://telegra.ph/Cara-Menggunakan-BoI-Music-Bot-boimusic-bot-03-09"
                     )
                 ]
             ]
