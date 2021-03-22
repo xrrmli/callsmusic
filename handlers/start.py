@@ -7,24 +7,25 @@ from helpers.filters import command, other_filters, other_filters2
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""<b>👋🏻 Hi {message.from_user.first_name}!</b>
-
-I am Calls Music, an open-source bot that lets you play music in your groups.
-
-Use the buttons below to know more about me.""",
+        f"""<b>👋🏻 Halo, {message.from_user.first_name}!</b>
+Saya adalah bot music voice call group!
+Dirancang khusus untuk menemanimu di obrolan suara.
+Berikut dibawah ini adalah kontak owner bot.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚒ Source code", url="https://t.me/CallsMusic"
+                        "⚒ OWNER BOT", url="https://t.me/boiii999"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/callsmusicchat"
-                    ),
+                        "INSTAGRAM", url="https://www.instagram.com/aipmarvelous/"
+                    )
+                ],
+                [
                     InlineKeyboardButton(
-                        "Channel 🔈", url="https://t.me/callsmusic"
+                        "CARA MEMAKAINYA", url="https://telegra.ph/Cara-menggunakan-Bot-Music-03-12"
                     )
                 ]
             ]
@@ -35,15 +36,15 @@ Use the buttons below to know more about me.""",
 @Client.on_message(command("start") & other_filters)
 async def start2(_, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        "Hai, apakah anda ingin memainkan sebuah lagu?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Yes", switch_inline_query_current_chat=""
+                        "✅ Ya", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "No ❌", callback_data="close"
+                        "Tidak ❌", callback_data="close"
                     )
                 ]
             ]
