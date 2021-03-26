@@ -8,9 +8,10 @@ from helpers.filters import command, other_filters, other_filters2
 async def start(_, message: Message):
     await message.reply_text(
         f"""<b>👋🏻 Halo, {message.from_user.first_name}!</b>
-Saya adalah bot music voice call group!
-Dirancang khusus untuk menemanimu di obrolan suara.
-Berikut dibawah ini adalah kontak owner bot.""",
+
+Saya adalah bot Music yang dirancang khusus untuk menemani anda memutar musik dalam grup melalui obrolan suara.
+
+Berikut dibawah ini adalah kontak owner bot dan cara menggunakannya.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -25,7 +26,7 @@ Berikut dibawah ini adalah kontak owner bot.""",
                 ],
                 [
                     InlineKeyboardButton(
-                        "CARA MEMAKAINYA", url="https://telegra.ph/Cara-Menggunakan-BoI-Music-Bot-boimusic-bot-03-09"
+                        "CARA PENGGUNAANNYA", url="https://telegra.ph/Cara-Menggunakan-BoI-Music-Bot-boimusic-bot-03-09"
                     )
                 ]
             ]
