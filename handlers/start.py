@@ -16,17 +16,17 @@ Berikut dibawah ini adalah kontak owner bot dan cara menggunakannya.""",
             [
                 [
                     InlineKeyboardButton(
-                        "⚒ OWNER BOT", url="https://t.me/boiii999"
+                        "Tutorial", url="https://telegra.ph/%F0%9D%95%B4%F0%9D%96%91%F0%9D%96%92%F0%9D%96%97-04-03-2"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "INSTAGRAM", url="https://www.instagram.com/aipmarvelous/"
+                        "Grup", url="https://t.me/tongkrongannvirtual"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "CARA PENGGUNAANNYA", url="https://telegra.ph/Cara-Menggunakan-BoI-Music-Bot-boimusic-bot-03-09"
+                        "Channel", url="https://t.me/painnhubbb"
                     )
                 ]
             ]
